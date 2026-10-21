@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #fff;
+  color: #1c1c1c;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #fc8019;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5200;
+}
+
+/* Utility classes */
+.container-app {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+.btn-primary {
+  @apply bg-primary text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-secondary transition-all duration-200 active:scale-95;
+}
+.btn-outline {
+  @apply border-2 border-primary text-primary px-5 py-2.5 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-200 active:scale-95;
+}
+.card {
+  @apply bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300;
+}
+.input-field {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition;
+}
